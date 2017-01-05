@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
+        
+        // Adobeの管理画面で登録したアプリのClientIDとSecretの文字列を設定する
+        AdobeUXAuthManager.shared().setAuthenticationParametersWithClientID("960807c8e7fc4e6db82db3b2c0b36880", withClientSecret: "e06ee550-31eb-4759-93d6-24a273a4cb34")
+        
         return true
     }
 
