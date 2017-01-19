@@ -16,9 +16,13 @@ class PostTableViewCell: UITableViewCell {
     
     @IBOutlet weak var likeLabel: UILabel!
     
+   // @IBOutlet weak var commentButton: UIButton!
+    
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var captionLabel: UILabel!
+    
+    //@IBOutlet weak var commentLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,7 +44,7 @@ class PostTableViewCell: UITableViewCell {
         
         let formatter = DateFormatter()
         formatter.locale = NSLocale(localeIdentifier: "ja_JP") as Locale!
-        formatter.dateFormat = "yyyy-MM--dd HH:mm"
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
         
         let dateString:String = formatter.string(from: postData.date! as Date)
         self.dateLabel.text = dateString
@@ -52,6 +56,9 @@ class PostTableViewCell: UITableViewCell {
             let buttonImage = UIImage(named: "like_none")
             self.likeButton.setImage(buttonImage, for: UIControlState.normal)
         }
+        
+        //self.commentLabel.text = "\(postData.name!) : \(postData.comment!)"
+
     }
     
 }

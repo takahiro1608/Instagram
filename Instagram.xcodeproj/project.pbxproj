@@ -34,7 +34,6 @@
 		959B35781E1A301400916E35 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959B35771E1A301400916E35 /* MessageUI.framework */; };
 		959B357A1E1A301E00916E35 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959B35791E1A301E00916E35 /* OpenGLES.framework */; };
 		959B357C1E1A302B00916E35 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959B357B1E1A302B00916E35 /* QuartzCore.framework */; };
-		959B357E1E1A303B00916E35 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959B357D1E1A303B00916E35 /* StoreKit.framework */; };
 		959B35831E1CCF9E00916E35 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959B35821E1CCF9E00916E35 /* Const.swift */; };
 		959B35851E1E429900916E35 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959B35841E1E429900916E35 /* PostData.swift */; };
 		959B35881E1E476100916E35 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959B35861E1E476100916E35 /* PostTableViewCell.swift */; };
@@ -99,7 +98,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				959B357E1E1A303B00916E35 /* StoreKit.framework in Frameworks */,
 				959B357C1E1A302B00916E35 /* QuartzCore.framework in Frameworks */,
 				959B357A1E1A301E00916E35 /* OpenGLES.framework in Frameworks */,
 				959B35781E1A301400916E35 /* MessageUI.framework in Frameworks */,
@@ -390,7 +388,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -439,7 +438,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -466,6 +466,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8KQB7A2SF3;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -487,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8KQB7A2SF3;
 				FRAMEWORK_SEARCH_PATHS = (

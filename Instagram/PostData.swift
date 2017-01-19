@@ -19,19 +19,19 @@ class PostData: NSObject {
     var date: NSDate?
     var likes: [String] = []
     var isLiked: Bool = false
+    //var comment: String?
     
     init(snapshot: FIRDataSnapshot, myId: String) {
         self.id = snapshot.key
         
-        let valueDictionary = snapshot.value as! [String: Any]
+        let valueDictionary = snapshot.value as! [String: AnyObject]
         
-        imageString = valueDictionary["ïmage"] as? String
+        imageString = valueDictionary["image"] as? String
         image = UIImage(data: NSData(base64Encoded: imageString!, options: .ignoreUnknownCharacters)! as Data)
         
         self.name = valueDictionary["name"] as? String
         
         self.caption = valueDictionary["caption"] as? String
-        
         
         let time = valueDictionary["time"] as? String
         self.date = NSDate(timeIntervalSinceReferenceDate: TimeInterval(time!)!)
@@ -46,5 +46,7 @@ class PostData: NSObject {
                 break
             }
         }
+        
+       // self.comment = valueDictionary["comment"] as? String
     }
 }
